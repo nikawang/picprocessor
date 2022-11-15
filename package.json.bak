@@ -1,0 +1,11 @@
+{
+    "name": "img-processor",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "serve": "node app.js"
+    },
+    "dependencies": {
+        "jimp": "0.16.2"
+    }
+}

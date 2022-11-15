@@ -1,0 +1,13 @@
+const Jimp = require('jimp');
+async function resize() {
+  // Read the image.
+  const image = await Jimp.read('https://ausstorageaccounta.blob.core.windows.net/privpic/pexels-photo-sample.jpeg?sp=r&st=2022-11-15T03:49:20Z&se=2022-11-15T11:49:20Z&spr=https&sv=2021-06-08&sr=c&sig=zrvpenz9UYJniPK817Jn185VrgzdvrSX7Vpazw3RHfg%3D');
+  // Resize the image to width 150 and heigth 150.
+  // await image.resize(150, 150);
+  // // Save and overwrite the image
+  // await image.writeAsync(`test/${Date.now()}_150x150.png`);
+
+  await image.scale(0.5, Jimp.RESIZE_BEZIER);
+  await image.writeAsync(`test/${Date.now()}_0.5.png`);
+}
+resize();
