@@ -1,0 +1,24 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "eventHubMessages",
+      "direction": "in",
+      "eventHubName": "evhubazfuncjapaneast",
+      "connection": "evhubnsazfuncjapaneast_RootManageSharedAccessKey_EVENTHUB",
+      "cardinality": "many",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    },
+    {
+      "type": "eventHub",
+      "name": "outputEventHubMessage",
+      "direction": "out",
+      "eventHubName": "output",
+      "connection": "evhubnsazfuncjapaneast_RootManageSharedAccessKey_OUTPUT",
+      "cardinality": "many",
+      "consumerGroup": "$Default",
+      "dataType": "string"
+    }
+  ]
+}
