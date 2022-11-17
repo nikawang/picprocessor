@@ -1,7 +1,7 @@
-module.exports = async function (context, eventHubMessages) {
-    context.log(`JavaScript eventhub trigger function called for message array ${eventHubMessages}`);
+module.exports = async function (context, inputEventHubMessages) {
+    context.log(`JavaScript eventhub trigger function called for message array ${inputEventHubMessages}`);
     
-    eventHubMessages.forEach((message, index) => {
+    inputEventHubMessages.forEach((message, index) => {
         context.log(`Processed message ${message}`);
         context.bindings.outputEventHubMessage = message;
     });

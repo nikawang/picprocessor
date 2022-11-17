@@ -2,10 +2,10 @@
   "bindings": [
     {
       "type": "eventHubTrigger",
-      "name": "eventHubMessages",
+      "name": "inputEventHubMessages",
       "direction": "in",
       "eventHubName": "evhubazfuncjapaneast",
-      "connection": "evhubnsazfuncjapaneast_RootManageSharedAccessKey_EVENTHUB",
+      "connection": "evhubnsazfuncjapaneast_RootManageSharedAccessKey_INPUT",
       "cardinality": "many",
       "consumerGroup": "$Default",
       "dataType": "string"
